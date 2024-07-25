@@ -17,3 +17,25 @@ This CI/CD approach leverages Jenkins to automate the process of building, pushi
 * **Integration with GitHub** : Direct integration with GitHub ensures that every code commit can trigger the pipeline. This promotes continuous integration, where code changes are frequently merged and tested, leading to early detection of issues.
 * **Scalability and Flexibility** : Using Amazon ECR for Docker image storage and Amazon EKS for deployment allows for scalable and flexible application management. EKS can handle large-scale deployments and ensures that the application can scale according to demand.
 * **Security** : AWS services like ECR and EKS are integrated with IAM for fine-grained access control, ensuring that only authorized users and processes can access and deploy the application. This enhances the overall security of the deployment pipeline.
+
+
+## Java Springboot application
+
+![1721883820978](image/README/1721883820978.png)
+
+This is our java application code that is currently running on my local system.
+
+## Jenkins Pipeline
+
+
+![1721884042909](image/README/1721884042909.png)
+
+![1721884082480](image/README/1721884082480.png)
+
+This is the jenkins pipeline that will automatically trigger on push to the main branch of out Github repository.
+
+## AWS ECR Repo
+
+![1721884169659](image/README/1721884169659.png)
+
+This is the ECR repo that will contain latest images from our build. After this we can make our EKS cluster to fetch these latest image and run it as an application.
